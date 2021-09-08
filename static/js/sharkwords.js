@@ -1,3 +1,5 @@
+'use strict';
+
 const WORDS = [
   'strawberry',
   'orange',
@@ -18,27 +20,39 @@ let numWrong = 0;
 // Loop over the chars in `word` and create divs.
 //
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  
+  const wordContainer = document.querySelector('#word-container');
+
+  for (const letter of word) {
+    wordContainer.insertAdjacentHTML('beforeend',`<div class="letter-box ${letter}"></div>`);
+  };
 };
 
 // Loop over each letter in the alphabet and generate a button
 // for each letter
+//
 const generateLetterButtons = () => {
-  // Replace this with your code
+  
+  const letterButtons = document.querySelector(#letter-buttons);
+
+  for (letter of ALPHABET) {
+    letterButtons.insertAdjacentHTML('afterbegin',`<button>${letter}</button>`);
+  }
 };
 
 // Set the `disabled` property of `buttonEl` to `true.
-//
 // `buttonEl` is an `HTMLElement` object.
 //
 const disableLetterButton = (buttonEl) => {
-  // Replace this with your code
+  
+  buttonEl.disabled = true;
+
 };
 
 // This is a helper function we will use in the future
 // It should return `true` if `letter` is in the word
 // For now, you should test it out to make sure it works
-
+//
 const isLetterInWord = (letter) => {
   // Replace this with your code
 };
@@ -64,3 +78,6 @@ const isLetterInWord = (letter) => {
   // someone clicks on a letter
 
 })();
+
+createDivsForChars('apple');
+generateLetterButtons();
